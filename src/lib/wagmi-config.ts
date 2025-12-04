@@ -11,7 +11,7 @@ const projectId = import.meta.env.VITE_PROJECT_ID || '1b97735cd7bad5d480d71ec698
 const metadata = {
   name: import.meta.env.VITE_APP_NAME || 'PRASASTI DApp',
   description: import.meta.env.VITE_APP_DESCRIPTION || 'Decentralized Academic Records Management',
-  url: import.meta.env.VITE_APP_URL || 'http://localhost:5173',
+  url: typeof window !== 'undefined' ? window.location.origin : (import.meta.env.VITE_APP_URL || 'http://localhost:5173'),
   icons: [import.meta.env.VITE_APP_ICON || 'https://avatars.githubusercontent.com/u/37784886']
 }
 
